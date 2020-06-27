@@ -53,3 +53,42 @@ $ sudo yum install java-1.8.0-openjdk-devel
     
 11 # Copy the password from your terminal, paste it into the Administrator password field and click Continue.
 
+
+Install Apache Maven in CentOS 7
+
+1 # Next, go to the official Apache Maven download page and grab the latest version or use the following wget command to download it under the maven home directory    ‘/usr/local/src’.
+
+    $ cd /usr/local/src
+    $ cd wget http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+    
+2 # Extract the downloaded archive file, and rename it using following commands
+
+    $ tar -xf apache-maven-3.5.4-bin.tar.gz
+    $ mv apache-maven-3.5.4/ apache-maven/
+    
+3 # Configure Apache Maven Environment
+
+    $ cd /etc/profile.d/
+    $ vim maven.sh
+    
+   # Add the following configuration in ‘maven.sh’ configuration file.
+   
+   # Apache Maven Environment Variables
+   # MAVEN_HOME for Maven 1 - M2_HOME for Maven 2
+    export M2_HOME=/usr/local/src/apache-maven
+    export PATH=${M2_HOME}/bin:${PATH}
+    
+4 # Now make the ‘maven.sh’ configuration file executable and then load the configuration by running the ‘source’ command.
+    $ chmod +x maven.sh
+    $ source /etc/profile.d/maven.sh
+    
+5 # Check Apache Maven Version
+
+    $ mvn --version
+    
+6 # Jenkins JDK configuration
+
+        ![alt text](https://static.packt-cdn.com/products/9781786465702/graphics/image_02_012.jpg)
+    
+    
+
