@@ -90,5 +90,6 @@ Install Apache Maven in CentOS 7
 
         ![alt text](https://static.packt-cdn.com/products/9781786465702/graphics/image_02_012.jpg)
     
-    
+7 # Jenkins Maven configuration
+        ![alt text] https://static.packt-cdn.com/products/9781786465702/graphics/image_02_013.jpg
 
